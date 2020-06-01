@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'angular-v9';
+  title = 'Angular 9';
+  logo = '../assets/angular_logo.svg';
 }
