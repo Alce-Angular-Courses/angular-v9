@@ -1,0 +1,23 @@
+:host {
+    display: block;
+    background-color: brown;
+    color: beige;
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
+header {
+    display: flex
+}
+
+h1 {
+    flex: 8 1 auto
+}
+
+div {
+    flex: 2 1 auto
+}
+
+img {
+    max-width: 100%;
+}

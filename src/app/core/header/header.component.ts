@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  public title: string;
+  logo: string;
+
+  constructor() {}
 
   ngOnInit(): void {
+    this.title = 'Curso de Angular';
+    this.logo = '../../../assets/angular_logo.svg';
   }
 
 }
