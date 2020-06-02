@@ -2,6 +2,13 @@
 
 Curso de Angular 9 en CAS
 
+- module
+- components (directive, pipes)
+- services
+- routing
+
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.7.
 
 ## Development server
