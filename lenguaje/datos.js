@@ -32,3 +32,5 @@ user.edad = 24
 console.log(user)
 console.log(user2)
 
+
+
