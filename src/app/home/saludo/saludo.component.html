@@ -1,0 +1,7 @@
+<h2 [title]="msg.toLocaleUpperCase()">{{titulo}}</h2>
+
+<input type="text" placeholder="Dime tu nombre" [(ngModel)] = "userName" >
+
+<p>Hola {{ userName ? userName : 'amigo' }}</p>
+
+<button id="btnBorrar" (click)=" onClickBorrar($event) ">Borrar</button>
