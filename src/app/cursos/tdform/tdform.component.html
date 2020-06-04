@@ -29,7 +29,7 @@
         <div class="form-group">
             <label for="passw">Contraseña</label>
             <input type="password" class="form-control" maxlength = 12 required
-                pattern="^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[*.!@$%^&(){}[]:;<>,.?/~_+-=|\]).{8,32}$"
+                pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,15}$"
                 [(ngModel)]="alumno.passw" name="passw" id="passw" #refPasswd="ngModel">
         </div>
         <div class="errors" [hidden]="refPasswd.untouched || refPasswd.valid">
