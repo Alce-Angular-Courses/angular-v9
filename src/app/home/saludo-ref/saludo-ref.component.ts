@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'cas-saludo-ref',
@@ -7,10 +7,11 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 })
 export class SaludoRefComponent implements OnInit {
 
-  // @ViewChild() userName
+  @ViewChild('refUserName', {static: true}) userName: ElementRef;
   constructor() { }
 
   ngOnInit(): void {
+    console.dir(this.userName.nativeElement);
   }
 
 }

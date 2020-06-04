@@ -1,0 +1,14 @@
+<h2>lista-simple works!</h2>
+<input type="text" placeholder="Describe la tarea" [(ngModel)]="tarea">
+<button (click)="addTarea()">Guardar</button>
+<div *ngIf="aTareas.length; else invitacion">
+    <h3>Lista de tareas</h3>
+    <ul>
+        <li *ngFor="let item of aTareas">{{item}}</li>
+    </ul>
+</div>
+<ng-template #invitacion>
+    <div>
+        Animate a añadir alguna tarea
+    </div>
+</ng-template>

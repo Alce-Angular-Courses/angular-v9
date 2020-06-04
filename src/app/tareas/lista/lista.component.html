@@ -1,0 +1,15 @@
+<p>lista works!</p>
+<cas-nueva (addTarea)="addTareas($event)"></cas-nueva>
+
+
+<div *ngIf="aTareas.length; else invitacion">
+    <h3>Lista de tareas</h3>
+    <ul>
+        <cas-tarea *ngFor="let item of aTareas" [tarea]='item'></cas-tarea>
+    </ul>
+</div>
+<ng-template #invitacion>
+    <div>
+        Animate a añadir alguna tarea
+    </div>
+</ng-template>
