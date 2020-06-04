@@ -5,7 +5,11 @@
 <div *ngIf="aTareas.length; else invitacion">
     <h3>Lista de tareas</h3>
     <ul>
-        <cas-tarea *ngFor="let item of aTareas" [tarea]='item'></cas-tarea>
+        <cas-tarea *ngFor="let item of aTareas; let i = index" 
+            [tarea]='item' [index]='i+1' 
+            (checkChanged)="onCheckChange($event)"
+            (clickDeleted)="onClickDelete($event)"
+            ></cas-tarea>
     </ul>
 </div>
 <ng-template #invitacion>

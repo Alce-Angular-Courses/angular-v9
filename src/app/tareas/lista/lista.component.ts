@@ -12,15 +12,27 @@ export class ListaComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.aTareas = [];
+    this.aTareas = localStorage.getItem('tareas') ?
+      JSON.parse(localStorage.getItem('tareas')) : [];
     this.nueva = new Tarea();
   }
 
   addTareas(tarea: Tarea) {
     this.aTareas.push(tarea);
-    console.log(this.aTareas);
+    this.save();
   }
 
-  delete() {}
+  onCheckChange(index) {
+    this.aTareas[index].completed = !this.aTareas[index].completed;
+    this.save();
+  }
 
+  onClickDelete(index) {
+    this.aTareas.splice(index, 1);
+    this.save();
+  }
+
+  private save() {
+    localStorage.setItem('tareas', JSON.stringify(this.aTareas))
+  }
 }

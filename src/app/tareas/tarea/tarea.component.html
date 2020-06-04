@@ -1,6 +1,7 @@
 <li>
-    <input type="checkbox" [(ngModel)]="tarea.completed">
-    <span> {{tarea.nombre}} </span>
-    <span>Responsable: {{tarea.responsable}}</span>
-    <span>🗑</span>    
+    <input type="checkbox" [(ngModel)]="tarea.completed" (change)="sendCheckChnage()">
+    <span>Nº {{ index }}</span>
+    <span [ngClass]="{completa: tarea.completed}"><b>{{tarea.nombre | titlecase}}</b></span> |
+    <span>responsable: {{tarea.responsable | uppercase}}</span>
+    <span class="boton" (click)="sendDeleteClick()">🗑</span>    
 </li>

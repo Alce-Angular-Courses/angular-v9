@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Tarea } from 'src/app/models/tarea';
 
 @Component({
@@ -8,9 +8,24 @@ import { Tarea } from 'src/app/models/tarea';
 })
 export class TareaComponent implements OnInit {
   @Input() tarea: Tarea;
-  constructor() { }
+  @Input() index: number;
+  @Output() checkChanged: EventEmitter<number>;
+  @Output() clickDeleted: EventEmitter<number>;
 
-  ngOnInit(): void {
+  constructor() {
+    this.checkChanged = new EventEmitter();
+    this.clickDeleted = new EventEmitter();
   }
 
+  ngOnInit(): void {
+    this.tarea = {...this.tarea };
+  }
+
+  sendCheckChnage() {
+    this.checkChanged.next(this.index - 1);
+  }
+
+  sendDeleteClick() {
+    this.clickDeleted.next(this.index - 1);
+  }
 }
