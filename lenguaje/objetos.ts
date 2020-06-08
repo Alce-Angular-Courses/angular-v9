@@ -25,7 +25,9 @@ p2.edad = 27;
 
 class AlunmoTS extends PersonTS {
 
-    constructor(nombre: string, edad: number, public curso: string) {
+    constructor(nombre: string, edad: number,
+                public curso: string,
+                public mascota: Pet) {
         super(nombre, edad);
     }
     saludar() {
@@ -34,9 +36,7 @@ class AlunmoTS extends PersonTS {
     }
 }
 
-const a1 = new AlunmoTS('Elena', 32, 'Angular');
-console.log(a1);
-a1.saludar();
+
 
 interface Mascota {
     nombre: string;
@@ -49,3 +49,14 @@ m1 = {nombre : 'Rufo', especie: 'canario'};
 
 let p5: PersonTS;
 p5 = {nombre: '', edad: null, saludar: null};
+
+class Pet implements Mascota {
+    constructor(
+        public nombre: string,
+        public especie: string
+    ) {}
+}
+
+const a1 = new AlunmoTS('Elena', 32, 'Angular', new Pet('Spike', 'perro'));
+console.log(a1);
+a1.saludar();
