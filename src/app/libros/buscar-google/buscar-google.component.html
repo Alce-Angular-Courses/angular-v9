@@ -1,0 +1,18 @@
+<h2>buscar-google works!</h2>
+<input type="text" name="clave" placeholder="Texto en el titulo" [(ngModel)]="clave">
+<button (click)="onClickBuscar()">Buscar</button>
+<div *ngIf="aLibros.length">
+    <h3>Lista de Libros</h3>
+    <table>
+        <tr>
+            <td>Id</td>
+            <td>Titulo</td>
+            <td>Autores</td>
+        </tr>
+        <tr *ngFor="let item of aLibros">
+            <td>{{ item.id }} </td>
+            <td>{{ item.title }}</td>
+            <td>{{ item.authors }}</td>
+        </tr>
+    </table>
+</div>

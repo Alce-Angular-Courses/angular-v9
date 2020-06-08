@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { registerLocaleData } from '@angular/common';
 import localeEs from '@angular/common/locales/es';
@@ -19,6 +20,7 @@ registerLocaleData(localeEs, 'es');
     RouterModule,
     BrowserModule,
     FormsModule,
+    HttpClientModule,
     AppRoutingModule,
     CoreModule
   ],
