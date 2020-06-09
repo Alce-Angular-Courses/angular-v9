@@ -1,12 +1,24 @@
 {
   "users": [
-    { "id": 1,
-      "name" : "Pepe Pérez",
+    {
+      "id": 1,
+      "name": "Pepe Pérez",
       "mail": "pepe@sample.com"
     },
-    { "id": 2,
-      "name" : "María López",
+    {
+      "id": 2,
+      "name": "María López García",
       "mail": "maria@sample.com"
+    },
+    {
+      "id": 4,
+      "name": "Eduardo Martín",
+      "mail": "edu@sample.es"
+    },
+    {
+      "id": 5,
+      "name": "Elena Garcia",
+      "mail": "elena@sample.es"
     }
   ],
   "posts": [

@@ -22,13 +22,13 @@ export class UsersService {
    }
 
    // Create -> POST
-  create(data): Promise<Usuario> {
+  create(data: Usuario): Promise<Usuario> {
     return this.http.post(this.url, data).toPromise() as Promise<Usuario>;
   }
 
    // Update -> PUT
 
-   update(id: number | string, data): Promise<Usuario> {
+   update(id: number | string, data: Usuario): Promise<Usuario> {
      return this.http.patch(this.url + id, data).toPromise() as Promise<Usuario>;
    }
 
